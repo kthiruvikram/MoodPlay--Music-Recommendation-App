@@ -2,41 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* MoodPlay Design System - Emotion-based music platform */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Background & Surfaces */
+    --background: 240 15% 6%;
+    --foreground: 220 15% 95%;
+    --surface: 240 12% 8%;
+    --surface-elevated: 240 10% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards & Containers */
+    --card: 240 12% 8%;
+    --card-foreground: 220 15% 95%;
+    --card-elevated: 240 10% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover & Overlays */
+    --popover: 240 15% 8%;
+    --popover-foreground: 220 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand Colors - Deep Purple/Blue */
+    --primary: 260 80% 55%;
+    --primary-foreground: 220 15% 95%;
+    --primary-glow: 260 90% 65%;
+    --primary-dark: 260 70% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Purple */
+    --secondary: 280 60% 25%;
+    --secondary-foreground: 220 15% 95%;
+    --secondary-bright: 280 70% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent Colors - Vibrant Cyan/Pink */
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 15% 6%;
+    --accent-pink: 320 100% 60%;
+    --accent-orange: 30 100% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Emotion Colors */
+    --emotion-happy: 45 100% 60%;
+    --emotion-sad: 220 60% 50%;
+    --emotion-angry: 0 80% 60%;
+    --emotion-surprised: 280 80% 60%;
+    --emotion-neutral: 200 20% 60%;
+    --emotion-fear: 260 40% 40%;
+    --emotion-disgust: 120 40% 40%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Muted & Text */
+    --muted: 240 8% 20%;
+    --muted-foreground: 220 10% 65%;
+    --text-subtle: 220 8% 55%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 15% 95%;
+    --success: 140 70% 50%;
+    --warning: 45 90% 60%;
 
-    --radius: 0.5rem;
+    /* Borders & Inputs */
+    --border: 240 8% 18%;
+    --border-bright: 240 12% 25%;
+    --input: 240 8% 18%;
+    --ring: 260 80% 55%;
+
+    /* Glass Effects */
+    --glass-bg: 240 15% 8% / 0.8;
+    --glass-border: 220 15% 95% / 0.1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-emotion: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-pink)));
+    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3), transparent 70%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-glass: 0 8px 32px hsl(240 15% 4% / 0.4);
+    --shadow-elevated: 0 10px 40px hsl(240 15% 4% / 0.6);
+
+    /* Animations */
+    --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +148,66 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background: var(--gradient-surface);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--surface));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-bright));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Emotion animations */
+  @keyframes pulse-emotion {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  .pulse-emotion {
+    animation: pulse-emotion 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-emotion);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
