@@ -1,71 +1,69 @@
-# Welcome to your Lovable project
+# 🎶 MoodPlay: Emotion-Aware Music Recommendation System
 
-## Project info
+**MoodPlay** is a multi-modal, AI-powered music recommendation system that understands your **emotions** from **facial expressions** and **voice tone**, and matches your mood with the perfect track using the **Spotify API**.
 
+Whether you're happy, sad, angry, or just feeling mellow — MoodPlay finds the sound that fits your soul.
 
+---
 
-## How can I edit this code?
+## 💡 Key Features
 
-There are several ways of editing your application.
+- 🎭 **Facial Emotion Recognition**  
+  Detects real-time emotions using deep learning and CNNs on facial input.
 
+- 🎤 **Voice Emotion Analysis**  
+  Analyzes audio features (pitch, tone, tempo) to classify vocal emotion.
 
+- 🧠 **Multi-Modal Emotion Fusion** *(Post-MVP)*  
+  Combines face and voice cues for enhanced emotional accuracy.
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🎵 **Spotify API Integration**  
+  Recommends real-time tracks based on mood clusters, not static playlists.
 
-**Use your preferred IDE**
+- 💻 **Cross-Platform UI**  
+  Intuitive and lightweight interface powered by Streamlit.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧠 How It Works
 
-Follow these steps:
+1. **Emotion Detection**  
+   → Facial input via webcam  
+   → Audio input via mic  
+   → Processed through pre-trained CNNs and audio classifiers
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Mood Classification**  
+   → Detected emotion mapped to one of several mood categories  
+   → Optional: K-Means clustering for fine-tuned personalization
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Music Recommendation**  
+   → Spotify API used to fetch tracks from mood-mapped playlists  
+   → Dynamic and personalized suggestions, refreshed in real time
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🛠️ Built With
 
-**Edit a file directly in GitHub**
+- **Python**
+- **TensorFlow**, **Keras**
+- **OpenCV**, **dlib**
+- **Librosa**, **SpeechRecognition**
+- **Spotify Web API**
+- **Scikit-learn**, **Pandas**
+- **Streamlit** for UI
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📦 Installation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+git clone https://github.com/kthiruvikram/tempo-sentient.git
+cd tempo-sentient
 
-## What technologies are used for this project?
+# Set up a virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 
-This project is built with:
+# Install dependencies
+pip install -r requirements.txt
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5db9fd33-7b0e-40e5-8a86-4e7b2a207f8c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
