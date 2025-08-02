@@ -52,16 +52,7 @@ Whether you're happy, sad, angry, or just feeling mellow — MoodPlay finds the 
 - **Scikit-learn**, **Pandas**
 - **Streamlit** for UI
 
----
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/kthiruvikram/tempo-sentient.git
-cd tempo-sentient
-
-# Set up a virtual environment (recommended)
-python3 -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
 # Install dependencies
