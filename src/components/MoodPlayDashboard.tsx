@@ -37,20 +37,11 @@ export default function MoodPlayDashboard() {
     <div className="min-h-screen bg-background">
       {/* Hero Header */}
       <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-secondary/20 border-b border-border">
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
-        
         <div className="relative container mx-auto px-6 py-12">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center animate-float">
-                  <Brain className="h-8 w-8 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 bg-accent-pink rounded-full flex items-center justify-center animate-pulse-glow">
-                  <Zap className="h-3 w-3 text-white" />
-                </div>
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center">
+                <Brain className="h-8 w-8 text-white" />
               </div>
             </div>
             
@@ -64,15 +55,15 @@ export default function MoodPlayDashboard() {
               
               <div className="flex items-center justify-center gap-6 pt-4">
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="w-2 h-2 rounded-full bg-success animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-success" />
                   <span className="text-muted-foreground">Real-time Detection</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-accent" />
                   <span className="text-muted-foreground">Multi-modal AI</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-muted-foreground">Spotify Integration</span>
                 </div>
               </div>
