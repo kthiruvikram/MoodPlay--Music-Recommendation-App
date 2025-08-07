@@ -3,10 +3,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Brain, Music, BarChart3, Settings, Headphones, Zap } from "lucide-react";
+import { Brain, Music, BarChart3, Settings, Headphones, Zap, MessageSquare } from "lucide-react";
 import EmotionDetector from "./EmotionDetector";
 import MusicRecommendations from "./MusicRecommendations";
 import DataVisualization from "./DataVisualization";
+import UserFeedback from "./UserFeedback";
 
 interface EmotionData {
   emotion: string;
@@ -118,6 +119,10 @@ export default function MoodPlayDashboard() {
               <TabsTrigger value="analytics" className="flex items-center gap-2">
                 <BarChart3 className="h-4 w-4" />
                 Analytics
+              </TabsTrigger>
+              <TabsTrigger value="feedback" className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4" />
+                Feedback
               </TabsTrigger>
               <TabsTrigger value="settings" className="flex items-center gap-2">
                 <Settings className="h-4 w-4" />
@@ -235,6 +240,10 @@ export default function MoodPlayDashboard() {
 
           <TabsContent value="analytics" className="space-y-6">
             <DataVisualization />
+          </TabsContent>
+
+          <TabsContent value="feedback" className="space-y-6">
+            <UserFeedback />
           </TabsContent>
 
           <TabsContent value="settings" className="space-y-6">
