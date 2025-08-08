@@ -20,9 +20,9 @@ export default function MoodPlayDashboard() {
   const [currentEmotion, setCurrentEmotion] = useState<EmotionData | null>(null);
   const [sessionStats, setSessionStats] = useState({
     detectionsToday: 47,
-    accuracyScore: 92.3,
+    accuracyScore: 95.4,
     songsRecommended: 156,
-    userSatisfaction: 4.2
+    userSatisfaction: 142
   });
 
   const handleEmotionDetected = (emotionData: EmotionData) => {
