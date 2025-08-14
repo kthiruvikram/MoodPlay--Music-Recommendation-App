@@ -53,8 +53,7 @@ Whether you're happy, sad, angry, or just feeling mellow — MoodPlay finds the 
 - **Streamlit** for UI
 
 
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  
 
-# Install dependencies
-pip install -r requirements.txt
+
 
