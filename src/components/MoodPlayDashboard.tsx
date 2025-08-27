@@ -22,7 +22,9 @@ export default function MoodPlayDashboard() {
     detectionsToday: 47,
     accuracyScore: 95.4,
     songsRecommended: 156,
-    userSatisfaction: 142
+    userSatisfaction: 142,
+    stressReliefSessions: 23,
+    therapyMinutes: 185
   });
 
   const handleEmotionDetected = (emotionData: EmotionData) => {
@@ -70,12 +72,14 @@ export default function MoodPlayDashboard() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-4 pt-8">
               {[
                 { label: 'Detections Today', value: sessionStats.detectionsToday, icon: Brain, color: 'primary' },
                 { label: 'Accuracy Score', value: `${sessionStats.accuracyScore}%`, icon: Zap, color: 'accent' },
                 { label: 'Songs Recommended', value: sessionStats.songsRecommended, icon: Music, color: 'secondary' },
-                { label: 'User Rating', value: `${sessionStats.userSatisfaction}/5`, icon: Headphones, color: 'accent-pink' }
+                { label: 'User Feedback', value: sessionStats.userSatisfaction, icon: MessageSquare, color: 'accent-pink' },
+                { label: 'Stress Relief Sessions', value: sessionStats.stressReliefSessions, icon: Headphones, color: 'success' },
+                { label: 'Therapy Minutes', value: sessionStats.therapyMinutes, icon: Zap, color: 'warning' }
               ].map((stat, index) => (
                 <Card key={index} className="glass p-4 hover:scale-105 transition-transform">
                   <div className="flex items-center gap-3">
