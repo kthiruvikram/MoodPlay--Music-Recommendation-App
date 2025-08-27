@@ -19,7 +19,8 @@ const emotions = [
   { name: 'surprised', color: 'emotion-surprised', icon: '😲' },
   { name: 'neutral', color: 'emotion-neutral', icon: '😐' },
   { name: 'fear', color: 'emotion-fear', icon: '😨' },
-  { name: 'disgust', color: 'emotion-disgust', icon: '🤢' }
+  { name: 'disgust', color: 'emotion-disgust', icon: '🤢' },
+  { name: 'stress', color: 'emotion-stress', icon: '😰' }
 ];
 
 export default function EmotionDetector({ onEmotionDetected }: { onEmotionDetected: (data: EmotionData) => void }) {

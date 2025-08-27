@@ -8,6 +8,7 @@ import EmotionDetector from "./EmotionDetector";
 import MusicRecommendations from "./MusicRecommendations";
 import DataVisualization from "./DataVisualization";
 import UserFeedback from "./UserFeedback";
+import StressGraph from "./StressGraph";
 
 interface EmotionData {
   emotion: string;
@@ -139,8 +140,9 @@ export default function MoodPlayDashboard() {
 
           <TabsContent value="detection" className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-2 space-y-6">
                 <EmotionDetector onEmotionDetected={handleEmotionDetected} />
+                <StressGraph />
               </div>
               
               <div className="space-y-6">
