@@ -22,8 +22,8 @@ export default function MoodPlayDashboard() {
   const [sessionStats, setSessionStats] = useState({
     detectionsToday: 47,
     accuracyScore: 95.4,
-    songsRecommended: 156,
-    userSatisfaction: 142,
+    songsRecommended: 89,
+    userSatisfaction: 76,
     stressReliefSessions: 23,
     therapyMinutes: 185
   });
