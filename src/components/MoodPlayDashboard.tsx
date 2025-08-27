@@ -24,7 +24,7 @@ export default function MoodPlayDashboard() {
     accuracyScore: 95.4,
     songsRecommended: 89,
     userSatisfaction: 76,
-    stressReliefSessions: 23,
+    stressReliefSessions: 12,
     therapyMinutes: 185
   });
 
