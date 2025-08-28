@@ -25,7 +25,7 @@ export default function MoodPlayDashboard() {
     songsRecommended: 89,
     userSatisfaction: 76,
     stressReliefSessions: 12,
-    therapyMinutes: 185
+    therapyMinutes: 85
   });
 
   const handleEmotionDetected = (emotionData: EmotionData) => {
