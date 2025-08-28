@@ -57,10 +57,7 @@ export default function StressGraph() {
                   borderRadius: '8px'
                 }}
                 labelFormatter={(label) => `Time: ${label}`}
-                formatter={(value: number, name: string) => [
-                  name === 'stress' ? `${value.toFixed(1)}/10` : `${value} bpm`,
-                  name === 'stress' ? 'Stress Level' : 'Heart Rate'
-                ]}
+                formatter={(value: number) => [`${value.toFixed(1)}/10`, 'Stress Level']}
               />
               <Line 
                 type="monotone" 
@@ -70,26 +67,14 @@ export default function StressGraph() {
                 dot={{ fill: 'hsl(var(--destructive))', strokeWidth: 2, r: 4 }}
                 activeDot={{ r: 6, stroke: 'hsl(var(--destructive))', strokeWidth: 2 }}
               />
-              <Line 
-                type="monotone" 
-                dataKey="heartRate" 
-                stroke="hsl(var(--accent))" 
-                strokeWidth={2}
-                dot={{ fill: 'hsl(var(--accent))', strokeWidth: 2, r: 3 }}
-                strokeDasharray="5 5"
-              />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="flex justify-center">
           <div className="text-center p-3 rounded-lg bg-surface">
             <p className="text-2xl font-bold text-destructive">{currentStressLevel.toFixed(1)}</p>
-            <p className="text-sm text-muted-foreground">Current Stress</p>
-          </div>
-          <div className="text-center p-3 rounded-lg bg-surface">
-            <p className="text-2xl font-bold text-accent">{stressData[stressData.length - 1].heartRate}</p>
-            <p className="text-sm text-muted-foreground">Heart Rate (BPM)</p>
+            <p className="text-sm text-muted-foreground">Current Stress Level</p>
           </div>
         </div>
 
