@@ -12,7 +12,8 @@ const emotionAccuracy = [
   { emotion: 'Surprised', facial: 88, voice: 83, combined: 91 },
   { emotion: 'Neutral', facial: 94, voice: 89, combined: 96 },
   { emotion: 'Fear', facial: 82, voice: 85, combined: 88 },
-  { emotion: 'Disgust', facial: 79, voice: 81, combined: 84 }
+  { emotion: 'Disgust', facial: 79, voice: 81, combined: 84 },
+  { emotion: 'Stress', facial: 87, voice: 90, combined: 93 }
 ];
 
 const emotionGenreHeatmap = [
@@ -27,36 +28,39 @@ const userSatisfaction = [
   { category: 'Emotion Accuracy', score: 4.0 },
   { category: 'Interface', score: 4.5 },
   { category: 'Response Time', score: 4.3 },
+  { category: 'Stress Relief', score: 4.4 },
   { category: 'Overall Experience', score: 4.1 }
 ];
 
 const confusionMatrix = [
-  { predicted: 'Happy', happy: 85, sad: 2, angry: 1, surprised: 8, neutral: 3, fear: 1, disgust: 0 },
-  { predicted: 'Sad', happy: 3, sad: 82, angry: 2, surprised: 1, neutral: 8, fear: 3, disgust: 1 },
-  { predicted: 'Angry', happy: 2, sad: 5, angry: 78, surprised: 3, neutral: 7, fear: 4, disgust: 1 },
-  { predicted: 'Surprised', happy: 12, sad: 2, angry: 3, surprised: 75, neutral: 6, fear: 2, disgust: 0 },
-  { predicted: 'Neutral', happy: 5, sad: 8, angry: 4, surprised: 2, neutral: 79, fear: 1, disgust: 1 },
-  { predicted: 'Fear', happy: 1, sad: 6, angry: 8, surprised: 3, neutral: 4, fear: 76, disgust: 2 },
-  { predicted: 'Disgust', happy: 0, sad: 3, angry: 5, surprised: 1, neutral: 2, fear: 4, disgust: 85 }
+  { predicted: 'Happy', happy: 85, sad: 2, angry: 1, surprised: 8, neutral: 3, fear: 1, disgust: 0, stress: 0 },
+  { predicted: 'Sad', happy: 3, sad: 82, angry: 2, surprised: 1, neutral: 8, fear: 3, disgust: 1, stress: 0 },
+  { predicted: 'Angry', happy: 2, sad: 5, angry: 78, surprised: 3, neutral: 7, fear: 4, disgust: 1, stress: 0 },
+  { predicted: 'Surprised', happy: 12, sad: 2, angry: 3, surprised: 75, neutral: 6, fear: 2, disgust: 0, stress: 0 },
+  { predicted: 'Neutral', happy: 5, sad: 8, angry: 4, surprised: 2, neutral: 79, fear: 1, disgust: 1, stress: 0 },
+  { predicted: 'Fear', happy: 1, sad: 6, angry: 8, surprised: 3, neutral: 4, fear: 76, disgust: 2, stress: 0 },
+  { predicted: 'Disgust', happy: 0, sad: 3, angry: 5, surprised: 1, neutral: 2, fear: 4, disgust: 85, stress: 0 },
+  { predicted: 'Stress', happy: 2, sad: 8, angry: 12, surprised: 1, neutral: 5, fear: 6, disgust: 1, stress: 65 }
 ];
 
 const engagementData = [
-  { time: '00:00', sessions: 45, interactions: 120 },
-  { time: '04:00', sessions: 23, interactions: 65 },
-  { time: '08:00', sessions: 89, interactions: 245 },
-  { time: '12:00', sessions: 156, interactions: 420 },
-  { time: '16:00', sessions: 134, interactions: 380 },
-  { time: '20:00', sessions: 98, interactions: 290 },
+  { time: '00:00', sessions: 45, interactions: 120, stressReduction: 15 },
+  { time: '04:00', sessions: 23, interactions: 65, stressReduction: 8 },
+  { time: '08:00', sessions: 89, interactions: 245, stressReduction: 42 },
+  { time: '12:00', sessions: 156, interactions: 420, stressReduction: 78 },
+  { time: '16:00', sessions: 134, interactions: 380, stressReduction: 65 },
+  { time: '20:00', sessions: 98, interactions: 290, stressReduction: 45 },
 ];
 
 const emotionDistribution = [
-  { name: 'Happy', value: 28, color: 'hsl(var(--emotion-happy))' },
-  { name: 'Neutral', value: 24, color: 'hsl(var(--emotion-neutral))' },
-  { name: 'Sad', value: 18, color: 'hsl(var(--emotion-sad))' },
-  { name: 'Surprised', value: 12, color: 'hsl(var(--emotion-surprised))' },
-  { name: 'Angry', value: 10, color: 'hsl(var(--emotion-angry))' },
-  { name: 'Fear', value: 5, color: 'hsl(var(--emotion-fear))' },
-  { name: 'Disgust', value: 3, color: 'hsl(var(--emotion-disgust))' }
+  { name: 'Happy', value: 25, color: 'hsl(var(--emotion-happy))' },
+  { name: 'Neutral', value: 22, color: 'hsl(var(--emotion-neutral))' },
+  { name: 'Sad', value: 16, color: 'hsl(var(--emotion-sad))' },
+  { name: 'Stress', value: 14, color: 'hsl(var(--destructive))' },
+  { name: 'Surprised', value: 10, color: 'hsl(var(--emotion-surprised))' },
+  { name: 'Angry', value: 8, color: 'hsl(var(--emotion-angry))' },
+  { name: 'Fear', value: 3, color: 'hsl(var(--emotion-fear))' },
+  { name: 'Disgust', value: 2, color: 'hsl(var(--emotion-disgust))' }
 ];
 
 export default function DataVisualization() {
@@ -69,10 +73,11 @@ export default function DataVisualization() {
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         {[
           { label: 'Overall Accuracy', value: '92.3%', change: '+2.1%', color: 'success' },
           { label: 'User Satisfaction', value: '4.2/5', change: '+0.3', color: 'primary' },
+          { label: 'Stress Reduction', value: '65%', change: '+8%', color: 'destructive' },
           { label: 'Active Sessions', value: '1,247', change: '+156', color: 'accent' },
           { label: 'Music Matches', value: '8.9k', change: '+1.2k', color: 'secondary' }
         ].map((metric, index) => (
@@ -206,6 +211,14 @@ export default function DataVisualization() {
                   strokeWidth={2}
                   name="Interactions"
                 />
+                <Line 
+                  type="monotone" 
+                  dataKey="stressReduction" 
+                  stroke="hsl(var(--destructive))" 
+                  strokeWidth={2}
+                  strokeDasharray="5 5"
+                  name="Stress Reduction Events"
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -220,9 +233,9 @@ export default function DataVisualization() {
             <Badge variant="outline">Accuracy: 81.2%</Badge>
           </div>
           <div className="overflow-x-auto">
-            <div className="grid grid-cols-8 gap-1 text-xs">
+            <div className="grid grid-cols-9 gap-1 text-xs">
               <div className="p-2 font-semibold">Predicted →</div>
-              {['Happy', 'Sad', 'Angry', 'Surprised', 'Neutral', 'Fear', 'Disgust'].map(emotion => (
+              {['Happy', 'Sad', 'Angry', 'Surprised', 'Neutral', 'Fear', 'Disgust', 'Stress'].map(emotion => (
                 <div key={emotion} className="p-2 text-center font-semibold text-muted-foreground">
                   {emotion}
                 </div>
