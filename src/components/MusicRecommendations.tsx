@@ -174,14 +174,9 @@ export default function MusicRecommendations({ emotion, confidence }: MusicRecom
       <div className="flex items-center justify-between">
         <div className="space-y-1">
           <h2 className="text-2xl font-bold gradient-text">Music for Your Mood</h2>
-          <div className="flex items-center gap-2">
-            <Badge variant="secondary" className={cn("capitalize", `bg-${getEmotionColor()}/20`)}>
-              {emotion}
-            </Badge>
-            <span className="text-sm text-muted-foreground">
-              {(confidence * 100).toFixed(0)}% confidence
-            </span>
-          </div>
+          <Badge variant="secondary" className={cn("capitalize", `bg-${getEmotionColor()}/20`)}>
+            {emotion}
+          </Badge>
         </div>
         <Button variant="glass" size="sm">
           <SkipForward className="h-4 w-4" />
