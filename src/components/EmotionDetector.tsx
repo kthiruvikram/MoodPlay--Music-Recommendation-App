@@ -76,13 +76,10 @@ export default function EmotionDetector({ onEmotionDetected }: { onEmotionDetect
           {(['facial', 'voice', 'both'] as const).map((mode) => (
             <Button
               key={mode}
-              variant={detectionMode === mode ? "default" : "secondary"}
+              variant={detectionMode === mode ? "emotion" : "glass"}
               size="sm"
               onClick={() => setDetectionMode(mode)}
-              className={cn(
-                "capitalize border-2",
-                detectionMode === mode ? "border-black shadow-lg" : "border-transparent"
-              )}
+              className="capitalize"
             >
               {mode === 'facial' && <Camera className="h-4 w-4" />}
               {mode === 'voice' && <Mic className="h-4 w-4" />}
