@@ -21,22 +21,22 @@
     --popover: 240 15% 8%;
     --popover-foreground: 220 15% 95%;
 
-    /* Primary Brand Colors - Light Blue */
-    --primary: 200 100% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 200 100% 70%;
-    --primary-dark: 200 100% 50%;
+    /* Primary Brand Colors - Deep Purple/Blue */
+    --primary: 260 80% 55%;
+    --primary-foreground: 220 15% 95%;
+    --primary-glow: 260 90% 65%;
+    --primary-dark: 260 70% 45%;
 
-    /* Secondary - Lighter Blue */
-    --secondary: 210 100% 85%;
-    --secondary-foreground: 210 100% 20%;
-    --secondary-bright: 210 100% 75%;
+    /* Secondary - Warm Purple */
+    --secondary: 280 60% 25%;
+    --secondary-foreground: 220 15% 95%;
+    --secondary-bright: 280 70% 60%;
 
-    /* Accent Colors - Light Blue variations */
-    --accent: 190 100% 70%;
-    --accent-foreground: 0 0% 100%;
-    --accent-pink: 200 100% 75%;
-    --accent-orange: 180 100% 65%;
+    /* Accent Colors - Vibrant Cyan/Pink */
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 15% 6%;
+    --accent-pink: 320 100% 60%;
+    --accent-orange: 30 100% 60%;
 
     /* Emotion Colors */
     --emotion-happy: 45 100% 60%;
