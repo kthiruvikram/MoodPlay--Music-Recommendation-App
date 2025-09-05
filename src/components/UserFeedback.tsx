@@ -169,7 +169,7 @@ export default function UserFeedback() {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm">Total Submissions</span>
-                <Badge variant="secondary">60</Badge>
+                <Badge variant="secondary">40</Badge>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm">Average Rating</span>
