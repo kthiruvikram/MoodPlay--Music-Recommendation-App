@@ -253,21 +253,21 @@ export default function MoodPlayDashboard() {
                       <p className="font-medium">Facial Recognition</p>
                       <p className="text-sm text-muted-foreground">Enable camera-based emotion detection</p>
                     </div>
-                    <Button variant="glass" size="sm">Enable</Button>
+                    <Button variant="secondary" size="sm">Enable</Button>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-medium">Voice Analysis</p>
                       <p className="text-sm text-muted-foreground">Enable microphone-based emotion detection</p>
                     </div>
-                    <Button variant="glass" size="sm">Enable</Button>
+                    <Button variant="secondary" size="sm">Enable</Button>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-medium">Real-time Processing</p>
                       <p className="text-sm text-muted-foreground">Process emotions in real-time</p>
                     </div>
-                    <Button variant="glass" size="sm">Configure</Button>
+                    <Button variant="secondary" size="sm">Configure</Button>
                   </div>
                 </div>
               </Card>
@@ -280,21 +280,21 @@ export default function MoodPlayDashboard() {
                       <p className="font-medium">Spotify Integration</p>
                       <p className="text-sm text-muted-foreground">Connect your Spotify account</p>
                     </div>
-                    <Button variant="emotion" size="sm">Connect</Button>
+                    <Button variant="default" size="sm">Connect</Button>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-medium">Recommendation Engine</p>
                       <p className="text-sm text-muted-foreground">AI-powered music suggestions</p>
                     </div>
-                    <Button variant="glass" size="sm">Optimize</Button>
+                    <Button variant="secondary" size="sm">Optimize</Button>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-medium">Genre Preferences</p>
                       <p className="text-sm text-muted-foreground">Customize music genres</p>
                     </div>
-                    <Button variant="glass" size="sm">Edit</Button>
+                    <Button variant="secondary" size="sm">Edit</Button>
                   </div>
                 </div>
               </Card>
