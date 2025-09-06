@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Brain, Music, BarChart3, Settings, Headphones, Zap, MessageSquare } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import EmotionDetector from "./EmotionDetector";
 import MusicRecommendations from "./MusicRecommendations";
 import DataVisualization from "./DataVisualization";
@@ -41,9 +40,6 @@ export default function MoodPlayDashboard() {
     <div className="min-h-screen bg-background">
       {/* Hero Header */}
       <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-secondary/20 border-b border-border">
-        <div className="absolute top-6 right-6">
-          <ThemeToggle />
-        </div>
         <div className="relative container mx-auto px-6 py-12">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-3 mb-4">
