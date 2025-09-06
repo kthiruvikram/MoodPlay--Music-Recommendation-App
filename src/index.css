@@ -8,76 +8,76 @@
   :root {
     /* Core Background & Surfaces */
     --background: 0 0% 100%;
-    --foreground: 210 100% 20%;
-    --surface: 200 100% 96%;
-    --surface-elevated: 200 100% 98%;
+    --foreground: 222 15% 15%;
+    --surface: 210 20% 98%;
+    --surface-elevated: 0 0% 100%;
 
     /* Cards & Containers */
-    --card: 200 100% 98%;
-    --card-foreground: 210 100% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 15%;
     --card-elevated: 0 0% 100%;
 
     /* Popover & Overlays */
-    --popover: 240 15% 8%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 15% 15%;
 
     /* Primary Brand Colors - Deep Purple/Blue */
-    --primary: 260 80% 55%;
-    --primary-foreground: 220 15% 95%;
-    --primary-glow: 260 90% 65%;
-    --primary-dark: 260 70% 45%;
+    --primary: 260 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 260 90% 55%;
+    --primary-dark: 260 75% 35%;
 
     /* Secondary - Warm Purple */
-    --secondary: 280 60% 25%;
-    --secondary-foreground: 220 15% 95%;
-    --secondary-bright: 280 70% 60%;
+    --secondary: 280 60% 92%;
+    --secondary-foreground: 280 85% 25%;
+    --secondary-bright: 280 70% 50%;
 
     /* Accent Colors - Vibrant Cyan/Pink */
-    --accent: 180 100% 50%;
-    --accent-foreground: 240 15% 6%;
-    --accent-pink: 320 100% 60%;
-    --accent-orange: 30 100% 60%;
+    --accent: 180 100% 40%;
+    --accent-foreground: 0 0% 100%;
+    --accent-pink: 320 85% 50%;
+    --accent-orange: 30 95% 50%;
 
     /* Emotion Colors */
-    --emotion-happy: 45 100% 60%;
-    --emotion-sad: 220 60% 50%;
-    --emotion-angry: 0 80% 60%;
-    --emotion-surprised: 280 80% 60%;
-    --emotion-neutral: 200 20% 60%;
-    --emotion-fear: 260 40% 40%;
-    --emotion-disgust: 120 40% 40%;
+    --emotion-happy: 45 95% 50%;
+    --emotion-sad: 220 70% 45%;
+    --emotion-angry: 0 85% 55%;
+    --emotion-surprised: 280 85% 55%;
+    --emotion-neutral: 200 25% 50%;
+    --emotion-fear: 260 45% 35%;
+    --emotion-disgust: 120 45% 35%;
 
     /* Muted & Text */
-    --muted: 240 8% 20%;
-    --muted-foreground: 220 10% 65%;
-    --text-subtle: 220 8% 55%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 222 15% 45%;
+    --text-subtle: 222 10% 55%;
 
     /* States */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 220 15% 95%;
-    --success: 140 70% 50%;
-    --warning: 45 90% 60%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 140 70% 45%;
+    --warning: 45 95% 50%;
 
     /* Borders & Inputs */
-    --border: 240 8% 18%;
-    --border-bright: 240 12% 25%;
-    --input: 240 8% 18%;
-    --ring: 260 80% 55%;
+    --border: 220 13% 91%;
+    --border-bright: 220 15% 85%;
+    --input: 220 13% 91%;
+    --ring: 260 85% 45%;
 
     /* Glass Effects */
-    --glass-bg: 240 15% 8% / 0.8;
-    --glass-border: 220 15% 95% / 0.1;
+    --glass-bg: 0 0% 100% / 0.8;
+    --glass-border: 220 13% 91% / 0.5;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-emotion: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-pink)));
-    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(200 100% 96%));
-    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3), transparent 70%);
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.15), transparent 70%);
 
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
-    --shadow-glass: 0 8px 32px hsl(240 15% 4% / 0.4);
-    --shadow-elevated: 0 10px 40px hsl(240 15% 4% / 0.6);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.2);
+    --shadow-glass: 0 8px 32px hsl(220 15% 15% / 0.1);
+    --shadow-elevated: 0 10px 40px hsl(220 15% 15% / 0.15);
 
     /* Animations */
     --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -87,19 +87,12 @@
     --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
