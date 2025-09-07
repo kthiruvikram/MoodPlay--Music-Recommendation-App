@@ -8,55 +8,55 @@
   :root {
     /* Core Background & Surfaces */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
-    --surface: 0 0% 98%;
+    --foreground: 0 0% 5%;
+    --surface: 0 0% 100%;
     --surface-elevated: 0 0% 100%;
 
     /* Cards & Containers */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 5%;
     --card-elevated: 0 0% 100%;
 
     /* Popover & Overlays */
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 5%;
 
-    /* Primary Brand Colors - Light Blue */
-    --primary: 200 80% 85%;
-    --primary-foreground: 0 0% 10%;
-    --primary-glow: 200 85% 75%;
-    --primary-dark: 200 70% 80%;
+    /* Primary Brand Colors - Darker Blue */
+    --primary: 200 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 85% 45%;
+    --primary-dark: 200 70% 40%;
 
-    /* Secondary - Light Purple */
-    --secondary: 280 40% 90%;
-    --secondary-foreground: 0 0% 10%;
-    --secondary-bright: 280 50% 85%;
+    /* Secondary - Darker Purple */
+    --secondary: 280 40% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-bright: 280 50% 55%;
 
-    /* Accent Colors - Light Cyan/Pink */
-    --accent: 180 60% 85%;
-    --accent-foreground: 0 0% 10%;
+    /* Accent Colors - Darker Cyan/Pink */
+    --accent: 180 60% 50%;
+    --accent-foreground: 0 0% 100%;
     --accent-pink: 320 50% 90%;
     --accent-orange: 30 60% 85%;
 
-    /* Emotion Colors - All Light Pastels */
-    --emotion-happy: 45 70% 85%;
-    --emotion-sad: 220 50% 85%;
-    --emotion-angry: 0 50% 90%;
-    --emotion-surprised: 280 50% 85%;
-    --emotion-neutral: 200 20% 90%;
-    --emotion-fear: 260 30% 85%;
-    --emotion-disgust: 120 30% 85%;
+    /* Emotion Colors - Darker versions */
+    --emotion-happy: 45 70% 55%;
+    --emotion-sad: 220 50% 55%;
+    --emotion-angry: 0 50% 60%;
+    --emotion-surprised: 280 50% 55%;
+    --emotion-neutral: 200 20% 60%;
+    --emotion-fear: 260 30% 55%;
+    --emotion-disgust: 120 30% 55%;
 
     /* Muted & Text */
     --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 20%;
-    --text-subtle: 0 0% 30%;
+    --muted-foreground: 0 0% 15%;
+    --text-subtle: 0 0% 25%;
 
-    /* States - Light versions */
-    --destructive: 0 50% 90%;
-    --destructive-foreground: 0 0% 10%;
-    --success: 140 40% 85%;
-    --warning: 45 60% 85%;
+    /* States - Darker versions */
+    --destructive: 0 50% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 140 40% 55%;
+    --warning: 45 60% 55%;
 
     /* Borders & Inputs */
     --border: 0 0% 20%;
