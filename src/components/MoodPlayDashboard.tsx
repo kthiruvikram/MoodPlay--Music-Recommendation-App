@@ -106,11 +106,11 @@ export default function MoodPlayDashboard() {
             <TabsList className="glass">
               <TabsTrigger value="detection" className="flex items-center gap-2">
                 <Brain className="h-4 w-4" />
-                Emotion Detection
+                <span className="text-primary-dark font-bold">Emotion Detection</span>
               </TabsTrigger>
               <TabsTrigger value="music" className="flex items-center gap-2">
                 <Music className="h-4 w-4" />
-                Music Recommendations
+                <span className="text-primary-dark font-bold">Music Recommendations</span>
               </TabsTrigger>
               <TabsTrigger value="analytics" className="flex items-center gap-2">
                 <BarChart3 className="h-4 w-4" />
