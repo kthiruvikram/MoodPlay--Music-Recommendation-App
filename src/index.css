@@ -104,14 +104,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans text-lg font-bold;
+    @apply bg-background text-foreground font-sans text-base font-semibold;
     background: var(--gradient-surface);
   }
 
   /* Global text enhancement for better visibility */
   * {
     font-weight: 600 !important;
-    font-size: 1.1em !important;
+    font-size: 1.05em !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
