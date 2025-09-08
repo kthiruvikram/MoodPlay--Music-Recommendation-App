@@ -104,8 +104,30 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans text-lg font-bold;
     background: var(--gradient-surface);
+  }
+
+  /* Global text enhancement for better visibility */
+  * {
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800 !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  p, span, div, label, input, button {
+    font-weight: 600 !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  /* Numbers and text in charts/graphs */
+  text, tspan {
+    font-weight: 700 !important;
+    font-size: 1.1em !important;
   }
 
   /* Custom scrollbar */
