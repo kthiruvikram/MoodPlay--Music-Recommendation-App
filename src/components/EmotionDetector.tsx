@@ -69,7 +69,7 @@ export default function EmotionDetector({ onEmotionDetected }: { onEmotionDetect
   return (
     <Card className="glass p-6 space-y-6">
       <div className="text-center space-y-4">
-        <h2 className="text-2xl font-bold gradient-text">Emotion Detection</h2>
+        <h2 className="text-2xl font-bold text-primary-dark">Emotion Detection</h2>
         
         {/* Detection Mode Toggle */}
         <div className="flex justify-center gap-2">

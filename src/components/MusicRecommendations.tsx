@@ -173,7 +173,7 @@ export default function MusicRecommendations({ emotion, confidence }: MusicRecom
     <Card className="glass p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div className="space-y-1">
-          <h2 className="text-2xl font-bold gradient-text">Music for Your Mood</h2>
+          <h2 className="text-2xl font-bold text-primary-dark">Music for Your Mood</h2>
           <Badge variant="secondary" className={cn("capitalize", `bg-${getEmotionColor()}/20`)}>
             {emotion}
           </Badge>
