@@ -88,8 +88,8 @@ export default function MoodPlayDashboard() {
                       <stat.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-3xl font-bold">{stat.value}</p>
-                      <p className="text-2xl text-muted-foreground">{stat.label}</p>
+                      <p className="text-sm font-bold">{stat.value}</p>
+                      <p className="text-sm text-muted-foreground">{stat.label}</p>
                     </div>
                   </div>
                 </Card>
