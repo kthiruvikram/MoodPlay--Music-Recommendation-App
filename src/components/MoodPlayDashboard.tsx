@@ -49,10 +49,10 @@ export default function MoodPlayDashboard() {
             </div>
             
             <div className="space-y-4">
-              <h1 className="text-2xl font-bold tracking-tight text-primary">
+              <h1 className="text-3xl font-bold tracking-tight text-primary">
                 MoodPlay
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-3xl text-muted-foreground max-w-2xl mx-auto">
                 Intelligent emotion-based music personalization platform powered by AI
               </p>
               
