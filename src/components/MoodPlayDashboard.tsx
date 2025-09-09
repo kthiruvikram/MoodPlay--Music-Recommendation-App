@@ -49,23 +49,23 @@ export default function MoodPlayDashboard() {
             </div>
             
             <div className="space-y-4">
-              <h1 className="text-[25px] font-bold tracking-tight text-primary">
+              <h1 className="text-[35px] font-bold tracking-tight text-primary">
                 MoodPlay
               </h1>
-              <p className="text-[25px] text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-[35px] text-muted-foreground max-w-2xl mx-auto">
                 Intelligent emotion-based music personalization platform powered by AI
               </p>
               
               <div className="flex items-center justify-center gap-6 pt-4">
-                <div className="flex items-center gap-2 text-[25px]">
+                <div className="flex items-center gap-2 text-[35px]">
                   <div className="w-2 h-2 rounded-full bg-success" />
                   <span className="text-muted-foreground">Real-time Detection</span>
                 </div>
-                <div className="flex items-center gap-2 text-[25px]">
+                <div className="flex items-center gap-2 text-[35px]">
                   <div className="w-2 h-2 rounded-full bg-accent" />
                   <span className="text-muted-foreground">Multi-modal AI</span>
                 </div>
-                <div className="flex items-center gap-2 text-[25px]">
+                <div className="flex items-center gap-2 text-[35px]">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-muted-foreground">Spotify Integration</span>
                 </div>
